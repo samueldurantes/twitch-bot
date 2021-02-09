@@ -1,0 +1,10 @@
+{
+  "name": "twitch-bot",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tmi.js": "^1.7.1",
+    "@retromada/toolbox": "https://github.com/retromada/toolbox.git"
+  }
+}
