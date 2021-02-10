@@ -14,6 +14,7 @@
   - [Install dependecies](#install-dependecies)
   - [Set environment variables](#set-environment-variables)
   - [Run](#run)
+- [Default commands](#default-commands)
 - [License](#license)
 
 ### Introduction
@@ -46,7 +47,7 @@ $ yarn start
 $ yarn dev
 ```
 
-### Default commands
+## Default commands
 Name | Description | Usage |
 -----|-------------|-------|
 addCommand | Add custom command in database | `<commandName> <message>`
