@@ -2,7 +2,7 @@ const { model, Schema } = require('mongoose')
 
 module.exports = model('Command', new Schema({
   _id: String,
-  value: String
+  message: String
 }, {
   timestamps: {
     createdAt: true,

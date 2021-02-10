@@ -11,7 +11,7 @@ module.exports = class AddCommand extends Command {
   async execute (channel, message, parameters) {
     await this.client.database.commands.add({
       _id: parameters[0],
-      value: parameters[1]
+      message: parameters[1]
     })
 
     this.client.say(channel, 'Command created successfully')
