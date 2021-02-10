@@ -17,7 +17,7 @@
 - [Default commands](#default-commands)
 - [License](#license)
 
-### About
+## About
 
 I did this bot just for educational purposes, I don't have interessent continue constantly work this project. Do what you want with this project, always respecting the [license](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE).
 
