@@ -25,7 +25,7 @@ I did this bot just for educational purposes, I don't have interessent continue 
 
 ### Install dependecies
 ```bash
-# This will install all required depedencies
+# This will install all required dependencies
 $ yarn install
 ```
 ### Set environment variables
