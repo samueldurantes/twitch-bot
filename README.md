@@ -19,7 +19,7 @@
 
 ### Introduction
 
-I make this bot just for educational purposes, I don't have interessent in continue working with this project. Do what you want with this project, always respecting the [license](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE.md).
+I make this bot just for educational purposes, I don't have interessent in continue working with this project. Do what you want with this project, always respecting the [license](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE).
 
 ## Set up
 
