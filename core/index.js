@@ -1,27 +1,27 @@
 const { Client } = require('tmi.js')
-const { File } = require('@retromada/toolbox')
 
-class Twitch extends Client {
+const Loaders = require('./loaders')
+
+class Main extends Client {
   constructor () {
     super({
       options: { debug: true },
       connection: { reconnect: true },
       identity: {
-        username: 'bot-name',
-        password: 'oauth:your-token'
+        username: process.env.BOT_USERNAME,
+        password: process.env.PASSWORD_OAUTH
       },
-      channels: ['your-channel']
+      channels: [process.env.CHANNEL]
     })
 
-    this.initializeListeners()
+    this.initializeLoaders()
   }
 
-  initializeListeners (directory = 'core/listeners') {
-    File.requireDirectory(directory, (Listener, event) => {
-      const listener = new Listener(this)
-      this.on(event, (...v) => listener['on' + listener.constructor.name](...v))
-    }, console.error)
+  async initializeLoaders () {
+    for (const name in Loaders) {
+      await new Loaders[name](this).load()
+    }
   }
 }
 
-module.exports = Twitch
+module.exports = Main
