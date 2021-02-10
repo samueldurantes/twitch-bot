@@ -14,10 +14,13 @@ module.exports = class Message extends Listener {
       const commandName = parameters.shift().toLowerCase()
 
       const command = this.client.commands.find((command) => command.name.toLowerCase() === commandName || (command.aliases && command.aliases.includes(commandName)))
+      const customCommand = await this.client.database.commands.findOne({ _id: commandName })
 
-      if (!command) return
-
-      command.execute(channel, message, parameters)
+      if (command) {
+        command.execute(channel, message, parameters)
+      } else if (customCommand) {
+        this.client.say(channel, customCommand.message)
+      }
     } catch (error) {
       console.log(error)
     }
