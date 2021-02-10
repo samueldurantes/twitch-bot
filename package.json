@@ -1,11 +1,16 @@
 {
   "name": "twitch-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config index.js"
+  },
   "license": "UNLICENSED",
   "dependencies": {
     "@retromada/toolbox": "https://github.com/retromada/toolbox.git",
-    "tmi.js": "^1.7.1"
+    "mongoose": "^5.11.15",
+    "tmi.js": "^1.7.1",
+    "transform-props": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^7.19.0",
