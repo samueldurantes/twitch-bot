@@ -9,7 +9,7 @@
 
 ## Table of contents
 
-- [Introduction](#introduction)
+- [About](#about)
 - [Set up](#set-up)
   - [Install dependecies](#install-dependecies)
   - [Set environment variables](#set-environment-variables)
@@ -17,9 +17,9 @@
 - [Default commands](#default-commands)
 - [License](#license)
 
-### Introduction
+### About
 
-I did this bot just for educational purposes, I don't have interessent constantly work this project. Do what you want with this project, always respecting the [license](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE).
+I did this bot just for educational purposes, I don't have interessent continue constantly work this project. Do what you want with this project, always respecting the [license](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE).
 
 ## Set up
 
