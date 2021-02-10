@@ -54,4 +54,4 @@ addCommand | Add custom command in database | `<commandName> <message>`
 
 ## License
 
-Licensed under the [MIT License](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE.md).
+Licensed under the [MIT License](https://github.com/samueldurantes/twitch-bot/blob/master/LICENSE).
