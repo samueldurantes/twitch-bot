@@ -1,4 +1,3 @@
-const { client } = require('tmi.js')
 const { Listener } = require('../structures')
 
 module.exports = class Message extends Listener {
@@ -6,11 +5,21 @@ module.exports = class Message extends Listener {
     super(client)
   }
 
-  onMessage (channel, tags, message, self) {
-    if (self) return
+  async onMessage (channel, tags, message, self) {
+    try {
+      const prefix = process.env.PREFIX
 
-    if (message.toLowerCase() === '!hello') {
-      this.client.say(channel, `@${tags.username}, heya!`)
+      if (self || !message.startsWith(prefix)) return
+      const parameters = message.slice(prefix.length).split(/ +/)
+      const commandName = parameters.shift().toLowerCase()
+
+      const command = this.client.commands.find((command) => command.name.toLowerCase() === commandName || (command.aliases && command.aliases.includes(commandName)))
+
+      if (!command) return
+
+      command.execute(channel, message, parameters)
+    } catch (error) {
+      console.log(error)
     }
   }
 }
