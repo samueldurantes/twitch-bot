@@ -51,6 +51,7 @@ $ yarn dev
 Name | Description | Usage |
 -----|-------------|-------|
 addCommand | Add custom command in database | `<commandName> <message>`
+deleteCommand | Delete custom command from the database |`<commandName> <message>`
 
 ## License
 
